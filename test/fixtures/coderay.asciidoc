@@ -1,0 +1,10 @@
+= Sample
+:author: Adam Hawkins
+:source-highlighter: coderay
+
+== Test
+
+[source,ruby]
+----
+puts 'Hello'
+----

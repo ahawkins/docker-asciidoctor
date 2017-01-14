@@ -1,0 +1,41 @@
+= docker-asciidoctor
+:author: Adam Hawkins
+
+== Docker Images
+
+IMPORTANT: These tags do not map to asciidoctor release. The tags map to
+a combination of all librarys in the toolchain. See `CHANGELOG.asciidoc`
+for more information.
+
+Current images:
+
+- `ahawkins/asciidoctor:latest`
+- `ahawkins/asciidoctor:0.1`, `ahawkins/asciidoctor:0.1.0`
+
+== About
+
+This repository contains source code to build a Docker image for
+Asciidoctor. It includes:
+
+- `asciidoctor`
+- `asciidoctor-pdf`
+- `asciidoctor-epub3`
+- `asciidoctor-diagram`
+- `pygments.rb`
+- `coderay`
+
+The goal is containerize the Asciidoctor toolchain.
+
+== Usage
+
+The easiest way is to mount your current directory as a volume. Here's
+an example:
+
+----
+docker run --rm -v "${PWD}:/data" -w /data ahawkins/asiidoctor \
+	asciidoctor -b html sample.asciidoc
+----
+
+This example mounts the current directory at `/data`, and sets the
+working directory to `/data`. `sample.asiidoc` is written to
+`/data/sample.html`.

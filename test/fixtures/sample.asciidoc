@@ -1,0 +1,5 @@
+= Sample
+:author: Adam Hawkins
+
+// epub tests require document with includes
+include::master.asciidoc[]
